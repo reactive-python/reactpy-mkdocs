@@ -13,7 +13,7 @@ MKDOCS_YML = WORK_DIR / "mkdocs.yml"
 COMPONENTS_DIR = WORK_DIR / "components"
 DOCS_DIR = WORK_DIR / "docs"
 # pick a different addr than the default to avoid conflicts
-MKDOCS_ADDR = "127.0.0.1:8000"
+MKDOCS_ADDR = "127.0.0.1:8888"
 
 
 @pytest.fixture
