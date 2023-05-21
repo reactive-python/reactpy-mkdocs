@@ -1,0 +1,7 @@
+site_name: Tests
+plugins:
+  - reactpy-mkdocs:
+      dev_host: "127.0.0.1"
+      dev_port: 5555
+nav:
+  - hello_world.md

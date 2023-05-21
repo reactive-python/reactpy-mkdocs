@@ -1,0 +1,25 @@
+# This workflows will upload a Javscript Package using NPM to npmjs.org when a release is created
+# For more information see: https://docs.github.com/en/actions/guides/publishing-nodejs-packages
+
+name: publish
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish-package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: "3.x"
+      - name: Install dependencies
+        run: pip install hatch
+      - name: Publish
+        env:
+          HATCH_INDEX_USER: ${{ secrets.PYPI_USERNAME }}
+          HATCH_INDEX_AUTH: ${{ secrets.PYPI_PASSWORD }}
+        run: hatch publish

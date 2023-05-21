@@ -1,0 +1,7 @@
+reactpy_mkdocs/static
+tests/site
+
+# standard
+node_modules
+venv
+__pycache__
