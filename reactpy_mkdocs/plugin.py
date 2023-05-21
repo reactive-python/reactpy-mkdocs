@@ -11,7 +11,7 @@ from mkdocs.livereload import LiveReloadServer
 from mkdocs.plugins import BasePlugin
 from reactpy.backend import starlette as reactpy_starlette
 
-from reactpy_mkdocs.reactpy_block import reactpy_frame
+from reactpy_mkdocs.reactpy_frame import reactpy_frame
 
 JS_BUNDLE = Path(__file__).parent / "static" / "reactpy-mkdocs.mjs"
 JS_BASE_URL_TEMPLATE = "const BASE_URL = {};"
