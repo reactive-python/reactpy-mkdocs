@@ -44,6 +44,8 @@ reactpy-mkdocs = "reactpy_mkdocs.plugin:ReactPyPlugin"
 dependencies = [
   "coverage[toml]>=6.5",
   "pytest",
+  "playwright",
+  "pytest-playwright",
 ]
 path = "venv"
 [tool.hatch.envs.default.scripts]
@@ -57,6 +59,9 @@ cov = [
   "test-cov",
   "cov-report",
 ]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
 
 [[tool.hatch.envs.all.matrix]]
 python = ["3.7", "3.8", "3.9", "3.10", "3.11"]

@@ -1,5 +1,5 @@
-test-project
 reactpy_mkdocs/static
+tests/site
 
 # standard
 node_modules

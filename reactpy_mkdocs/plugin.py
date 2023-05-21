@@ -24,6 +24,10 @@ class ReactPyPluginConfig(Config):
 
 
 class ReactPyPlugin(BasePlugin[ReactPyPluginConfig]):
+    """Plugin for MkDocs that allows embedding ReactPy components in Markdown files"""
+
+    serving: bool = False
+
     def on_startup(
         self, command: Literal["build", "gh-deploy", "serve"], dirty: bool
     ) -> None:

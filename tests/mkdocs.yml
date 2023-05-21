@@ -1,0 +1,5 @@
+site_name: Tests
+plugins:
+  - reactpy-mkdocs
+nav:
+  - hello_world.md
